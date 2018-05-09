@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BatVis</title>
+    <script src="lib/d3.v4.min.js"></script>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/DragControls.js"></script>
+    <script src="lib/TrackballControls.js"></script>
+    
+    <link rel="stylesheet" href="css/stylesheets.css">
+  </head>
+  <body>
+  
+    <div class="pageContainer">
+      <div class="firstElements">
+        <button class="button exportCSV" onclick="batCSVGenerator.generateCSV(currentFileDate);">Export to <br>CSV file</button>
+        <svg id="calibrator"></svg>
+        <div id="threejsviewer"></div>
+      </div>
+      <div class="graphs">
+        <svg id="averageFlightTimeGraph"></svg>
+        <svg id="populationGraph"></svg>
+        <svg id="flightsHistogram"></svg>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="batPopulation/calibrator.js"></script>
+    <script type="text/javascript" src="batPopulation/populationGraph.js"></script>
+    <script type="text/javascript" src="batPopulation/flightsHistogram.js"></script>
+    <script type="text/javascript" src="batPopulation/averageFlightTimeGraph.js"></script>
+    <script type="text/javascript" src="csvExporter/batCSVGenerator.js"></script>
+    <script type="text/javascript" src="3DViewer/scene.js"></script>
+    <script type="text/javascript" src="3DViewer/batViewer.js"></script>
+    <script type="text/javascript" src="batPopulation/main.js"></script>
+
+  </body>
+</html>    

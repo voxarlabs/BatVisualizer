@@ -1,0 +1,165 @@
+body {
+	user-select: none;
+	display: flex;
+}
+
+.pageContainer {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.graphs {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.firstElements {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	margin-left: 180px;
+	margin-top: 10px;
+}
+
+.helpTooltip {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    font: 12px verdana;
+    color: #3B003F;
+    background: #01FE87;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.helpTooltip.calibratorHTT             { width: 300px; height:60px; }
+.helpTooltip.averageFlightTimeGraphHTT { width: 300px; height:75px; }
+.helpTooltip.populationGraphHTT        { width: 300px; height:120px; }
+.helpTooltip.flightsHistogramHTT       { width: 300px; height:75px; }
+
+.helpTooltipCircle               { fill: #37003C; opacity: 0.3; }
+.helpTooltipCircle.calibratorHTT { fill: #FFAAFF; opacity: 1; }
+
+
+/* ----------- Calibrator styles ----------- */
+
+#calibrator {
+  	margin-left: 280px;
+}
+
+.calibratorLine#leftLine   { fill: yellow; cursor: w-resize; }
+.calibratorLine#rightLine  { fill: green;  cursor: e-resize; }
+.calibratorLine#topLine    { fill: red;    cursor: n-resize; }
+.calibratorLine#bottomLine { fill: blue;   cursor: s-resize; }
+
+.calibratorCell                    { cursor: pointer; }
+.calibratorCell[status="neutral"]  { opacity: 0;                }
+.calibratorCell[status="entrance"] { opacity: 0.5; fill: green; }
+.calibratorCell[status="exit"]     { opacity: 0.5; fill: red;   }
+
+/* ----------- Population graph styles ----------- */
+
+#populationGraph {
+  	margin-left: 20px;
+  	background-color: #F4F4F4;
+  	user-select: none;
+  	cursor: default;
+}
+
+#populationGraph > .xAxis > *,
+#populationGraph > .xAxis > * > *,
+#populationGraph > .yAxis > *,
+#populationGraph > .yAxis > * > *,
+#populationGraph > .miniXAxis > *,
+#populationGraph > .miniXAxis > * > * {
+	stroke: #222222;
+}
+
+.populationGraphTooltip {
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    padding: 2px;
+    font: 12px verdana;
+    color: #3B003F;
+    background: #01FE87;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* ----------- FlightsHistogram styles ----------- */
+
+#flightsHistogram {
+  	margin-left: 20px;
+  	background-color: #F4F4F4;
+  	user-select: none;
+}
+
+#flightsHistogram > .xAxis > *,
+#flightsHistogram > .xAxis > * > *,
+#flightsHistogram > .yAxis > *,
+#flightsHistogram > .yAxis > * > * {
+	stroke: #222222;
+}
+
+/* ----------- AverageFlightTimeGraph styles ----------- */
+
+#averageFlightTimeGraph {
+  	margin-left: 20px;
+  	background-color: #F4F4F4;
+  	user-select: none;
+}
+
+#averageFlightTimeGraph > .xAxis > *,
+#averageFlightTimeGraph > .xAxis > * > *,
+#averageFlightTimeGraph > .yAxis > *,
+#averageFlightTimeGraph > .yAxis > * > * {
+	stroke: #222222;
+}
+
+/* ----------- 3D Bat Viewer styles ----------- */
+
+#threejsviewer {
+	margin-left: 140px;
+	margin-right: 0px;
+	margin-top: 5px;
+	width: 500px;
+    height: 360px;
+}
+
+/* ---------- batCSVGenerator styles --------------- */
+
+.button {
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+    width: 250px;
+    height: 140px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 100px;
+    box-shadow: 10px 10px 10px #363636;
+    font-family: "Lucida Console";
+}
+
+.exportCSV {
+    background-color: #37003C;
+    color: #888888;
+}
+
+.exportCSV:hover {
+    background-color: #90538F;
+    color: #EEEEEE;
+}

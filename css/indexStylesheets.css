@@ -1,0 +1,184 @@
+body { 
+    background-size: cover;
+    opacity: 0.9;
+    user-select: none;
+    background-image-transform: ;
+    background-image: url("../images/bat_cave.jpg");
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: 999;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+body.loaded #preloader{
+    opacity: 1;
+    visibility: hidden;
+}
+
+.loader{
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #24b662;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.loader:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #24b662;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+.loader:after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #24b662;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+.home-section {
+    height: 100%;
+}
+
+.home-section-background {
+    position: relative;
+    height: 100%;
+    margin-top: 180px;
+    background-size: cover;
+    z-index: 1;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.home-section-background h2 {
+    color: yellow;
+    font-size: 60px;
+    letter-spacing: 4px;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 80px;
+    opacity: 1;
+}
+
+.home-section-background p {
+    color: yellow;
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
+}
+
+#title {
+    display: block;
+    margin: auto;
+    font-family: "Lucida Console";
+    fill: #FFFF00;
+}
+
+#divFileButtons {
+    /*overflow: auto;
+    overflow-y: scroll;*/
+}
+
+.button {
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+    width: 470px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 10px 10px 10px #363636;
+    font-family: "Lucida Console";
+}
+
+.button#accessBatVis {
+    background-color: #000000;
+    color: #FFFF00;
+}
+
+.batFile {
+    background-color: #37003C;
+    color: #888888;
+}
+
+.batFile:hover[selected="false"] {
+    background-color: #90538F;
+    color: #EEEEEE;
+}
+
+.batFile[selected="true"] {
+    background-color: #FFFF00;
+    color: #000000;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    transition: 0.5s;
+}
+
+.button#accessBatVis span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button#accessBatVis:hover span { padding-right: 25px; }
+.button#accessBatVis:hover span:after { opacity: 1; right: 0; }
+
+.button#back span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+.button#back:hover span { padding-left: 25px; }
+.button#back:hover span:after { opacity: 1; left: 0; }
